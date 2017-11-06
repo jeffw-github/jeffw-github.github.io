@@ -243,6 +243,11 @@ Navigation
 	border: none;
 	outline: 0;
 }
+.navbar .icon-bar {
+	background-color: #4C4F4F;
+	border: none;
+	outline: 0;
+}
 /* ==========================================================================
 Hero
 ========================================================================== */
@@ -280,7 +285,7 @@ h1.arrow {
 Features
 ========================================================================== */
 .features{
-	background-color: #f3f5f8;
+	background-color: #fff;
 }
 .features-wrapper, .team-wrapper { margin: 70px 0 0; }
 .shadow { text-shadow: rgb(55, 181, 161) 1px 1px, rgb(55, 181, 161) 2px 2px, rgb(55, 181, 161) 3px 3px, rgb(55, 181, 161) 4px 4px, rgb(55, 181, 161) 5px 5px, rgb(55, 181, 161) 6px 6px, rgb(55, 181, 161) 7px 7px, rgb(55, 181, 161) 8px 8px, rgb(55, 181, 161) 9px 9px, rgb(55, 181, 161) 10px 10px, rgb(55, 181, 161) 11px 11px, rgb(55, 181, 161) 12px 12px, rgb(55, 182, 162) 13px 13px, rgb(55, 183, 163) 14px 14px, rgb(56, 184, 164) 15px 15px, rgb(56, 185, 165) 16px 16px, rgb(56, 186, 166) 17px 17px, rgb(57, 187, 167) 18px 18px, rgb(57, 188, 168) 19px 19px, rgb(57, 189, 169) 20px 20px, rgb(58, 191, 170) 21px 21px, rgb(58, 192, 171) 22px 22px, rgb(58, 193, 172) 23px 23px, rgb(59, 194, 173) 24px 24px, rgb(59, 195, 174) 25px 25px, rgb(59, 196, 175) 26px 26px, rgb(60, 197, 176) 27px 27px, rgb(60, 198, 177) 28px 28px, rgb(60, 199, 178) 29px 29px, rgb(61, 201, 179) 30px 30px; }
@@ -305,7 +310,7 @@ iPhone Section
 /* ==========================================================================
 Swag
 ========================================================================== */
-.swag { background: url('../img/london30.png') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
+.swag { background: url('../img/yosemite.jpeg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; height: 250px;}
 .swag h1 { color: #4C4F4F; font-size: 40px; text-transform: none; letter-spacing: 5px; font-family: 'Josefin Slab', serif; text-shadow: 3px 3px 3px #aaa;}
 .swag h1 span { display: block; font-size: 25px; margin-top: 20px; }
 .down-arrow-btn { 
@@ -333,6 +338,9 @@ Swag
 /* ==========================================================================
 Portfolio
 ========================================================================== */
+.portfolio {
+	background: #f3f5f8;
+}
 .portfolio h1 {
 	margin-bottom: 50px;
 }
@@ -477,7 +485,7 @@ Contact
 Footer
 ========================================================================== */
 footer a { color: #a1a9b0; }
-footer { background-color: #242830; padding: 40px 0 30px; }
+footer { padding: 40px 0 30px; }
 footer p { color: #fff; }
 ul.legals { list-style: none; color: #fff; line-height: 25px; }
 ul.legals li { display: inline-block; }
@@ -498,3 +506,135 @@ Waypoints
 .delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
 .delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
 .wp3 { background: url('../img/iphone-bg.png') no-repeat center center; background-position: 200px 10px; height: 100%; }
+/* ==========================================================================
+Timeline
+========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.timeline {
+  color: #000;
+}
+.timeline ul {
+  background: #fff;
+  padding: 50px 0;
+}
+.timeline ul li {
+  background: #000;
+  position: relative;
+  margin: 0 auto;
+  width: 5px;
+  padding-bottom: 40px;
+  list-style-type: none;
+}
+.timeline ul li:last-child {
+  padding-bottom: 7px;
+}
+.timeline ul li:before {
+  content: '';
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.timeline ul li .hidden {
+  opacity: 0;
+}
+.timeline ul li .content {
+  background: #fff;
+  position: relative;
+  top: 7px;
+  width: 450px;
+  padding: 20px;
+}
+.timeline ul li .content h2 {
+  color: #000;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.timeline ul li .content p {
+  text-align: center;
+}
+/*.timeline ul li .content:before {
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 0px;
+  width: 38px;
+  height: 5px;
+}*/
+.timeline ul li:nth-child(odd) .content {
+  left: 50px;
+  background: #fff;
+/*  background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
+  background: linear-gradient(-45deg, #56BC83, #67CC8E);*/
+}
+.timeline ul li:nth-child(odd) .content:before {
+  left: -38px;
+}
+.timeline ul li:nth-child(even) .content {
+  left: calc(-450px - 45px);
+  background: #fff;
+/*  background: -webkit-linear-gradient(45deg, #56BC83, #67CC8E);
+  background: linear-gradient(45deg, #56BC83, #67CC8E);*/
+}
+.timeline ul li:nth-child(even) .content:before {
+  right: -38px;
+}
+
+.timeline h2 span {
+	font-size: 13px;
+	font-weight: 100;
+	margin-top: 10px;
+	margin-bottom: -5px;
+	text-transform: none;
+	display: block;
+}
+
+/* -------------------------
+   ----- Media Queries ----- 
+   ------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+    width: 41vw;
+  }
+
+  .timeline ul li:nth-child(even) .content {
+    left: calc(-41vw - 45px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li .content h2 {
+    text-align: initial;
+  }
+  .timeline ul li:nth-child(even) .content {
+    left: 45px;
+    background: #fff;
+/*    background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
+    background: linear-gradient(-45deg, #56BC83, #67CC8E);*/
+  }
+  .timeline ul li:nth-child(even) .content:before {
+    left: -33px;
+  }
+}
